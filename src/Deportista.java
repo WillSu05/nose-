@@ -1,0 +1,68 @@
+public abstract class Deportista {
+    protected String nombre;
+    protected  int edad;
+    protected String pais;
+    protected int horasEntrenamiento;
+
+    public Deportista() {
+    }
+
+    public Deportista(String nombre, int edad, String pais, int horasEntrenamiento) {
+        this.nombre = nombre;
+        this.edad = edad;
+        this.pais = pais;
+        this.horasEntrenamiento = horasEntrenamiento;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public int getEdad() {
+        return edad;
+    }
+
+    public void setEdad(int edad) {
+        this.edad = edad;
+    }
+
+    public String getPais() {
+        return pais;
+    }
+
+    public void setPais(String pais) {
+        this.pais = pais;
+    }
+
+    public int getHorasEntrenamiento() {
+        return horasEntrenamiento;
+    }
+
+    public void setHorasEntrenamiento(int horasEntrenamiento) {
+        this.horasEntrenamiento = horasEntrenamiento;
+    }
+
+    @Override
+    public String toString() {
+        return "Deportista{" +
+                "nombre='" + nombre + '\'' +
+                ", edad=" + edad +
+                ", pais='" + pais + '\'' +
+                ", horasEntrenamiento=" + horasEntrenamiento +
+                '}';
+    }
+
+    public void mostrarInformacion(){
+        System.out.println("nombre: "+ nombre);
+        System.out.println("edad: "+ edad);
+        System.out.println("pais: "+ pais);
+        System.out.println("horasEntrenamiento: "+ horasEntrenamiento);
+
+    }
+
+    public abstract double calcularRendimiento();
+}
